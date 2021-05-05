@@ -1,7 +1,7 @@
 import React from 'react';
 import Chart from 'react-apexcharts';
 
-function BarChat() {
+function BarChart() {
     const options = {
         plotOptions: {
             bar: {
@@ -31,4 +31,4 @@ function BarChat() {
     );
 }
 
-export default BarChat;
+export default BarChart;
