@@ -12,12 +12,13 @@ import com.devsuperior.dsvendas.entities.*;
 
 @Service
 public class SellerService {
-	
+
 	@Autowired
 	private SellerRepository repository;
-	
+
 	public List<SellerDTO> findAll() {
-		List<Seller> result =  repository.findAll();
-		return result.stream().map(x -> new SellerDTO(x)).collect(Collectors.toList());
+		List<Seller> sellers = repository.findAll();
+
+		return sellers.stream().map(seller -> new SellerDTO(seller)).collect(Collectors.toList());
 	}
 }
